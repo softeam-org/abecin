@@ -32,6 +32,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className={roboto.className}>
+      <head>
+        <link
+        	rel="stylesheet"
+        	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
