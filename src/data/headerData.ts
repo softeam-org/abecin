@@ -41,7 +41,7 @@ const headerData: MenuItem[] = [
       label: "A ABECIN",
       link: "/sobre",
       submenu: [
-        { label: "Quem Somos", link: "/sobre/quem-somos" },
+        { label: "Quem Somos", link: "/sobre/" },
         { label: "Diretoria", link: "/sobre/diretoria" },
         { label: "História", link: "/sobre/historia" },
         { label: "Estatuto", link: "/sobre/estatuto" },
