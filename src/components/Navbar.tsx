@@ -10,10 +10,17 @@ import { MenuItem } from '@/types/MenuItem'
  * O componente lida com a exibição de submenus para itens de menu que os possuem e a navegação do usuário para links específicos.
  * Ele também inclui suporte para a navegação no mobile através de um menu hamburguer.
  *
+ * Funcionalidades principais:
  * - Exibe uma logo clicável que redireciona para a página inicial.
  * - Exibe os itens principais do menu de navegação, com submenus que podem ser expandidos ao clicar.
  * - No caso de itens de menu sem submenu, ao clicar, o usuário é redirecionado para o link correspondente.
+ * - Implementa lógica para fechar submenus ao clicar fora da área de navegação.
  * - No mobile, a navegação é exibida por meio de um menu hambúrguer.
+ *
+ * Melhorias recentes:
+ * - Adicionado tratamento para fechar submenus ao clicar fora do menu utilizando um `useEffect` com `menuRef`.
+ * - `menuRef` agora abrange o contêiner principal de navegação para englobar todos os elementos que devem estar protegidos do clique externo.
+ * - Adicionada lógica condicional para alternar a visibilidade de submenus e suporte para navegação no mobile.
  *
  * @component
  * @example
@@ -22,6 +29,7 @@ import { MenuItem } from '@/types/MenuItem'
  *
  * @returns {JSX.Element} Componente Navbar com menu de navegação e suporte para submenus e navegação no mobile.
  */
+
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const [openSubmenu, setOpenSubmenu] = useState<number | null>(null)
