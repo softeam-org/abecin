@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import headerData from '@/data/headerData'
@@ -26,6 +26,7 @@ export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const [openSubmenu, setOpenSubmenu] = useState<number | null>(null)
 	const router = useRouter()
+	const menuRef = useRef<HTMLDivElement | null>(null)
 
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
@@ -41,9 +42,26 @@ export default function Navbar() {
 		if (item.submenu.length < 1) {
 			router.push(item.link!)
 		} else {
-			setOpenSubmenu(openSubmenu === index ? null : index)
+			setOpenSubmenu(prev => (prev === index ? null : index))
 		}
 	}
+
+	useEffect(() => {
+		const handleOutsideClick = (event: MouseEvent) => {
+			if (
+				menuRef.current &&
+				!menuRef.current.contains(event.target as Node)
+			) {
+				setOpenSubmenu(null)
+			}
+		}
+
+		document.addEventListener('mousedown', handleOutsideClick)
+
+		return () => {
+			document.removeEventListener('mousedown', handleOutsideClick)
+		}
+	}, [menuRef])
 
 	return (
 		<header className="fixed top-0 z-10 w-full bg-[#4A1861] py-4 px-8">
@@ -78,7 +96,10 @@ export default function Navbar() {
 				</div>
 
 				{/* Navegação Desktop */}
-				<nav className="hidden lg:flex flex-row gap-4 items-center relative">
+				<nav
+					className="hidden lg:flex flex-row gap-4 items-center relative"
+					ref={menuRef}
+				>
 					{headerData.map((item, index) => (
 						<div key={index} className="relative">
 							<button
