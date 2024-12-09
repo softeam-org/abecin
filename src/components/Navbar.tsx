@@ -34,7 +34,8 @@ export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 	const [openSubmenu, setOpenSubmenu] = useState<number | null>(null)
 	const router = useRouter()
-	const menuRef = useRef<HTMLDivElement | null>(null)
+	const menuDesktopRef = useRef<HTMLDivElement | null>(null)
+	const menuMobileRef = useRef<HTMLDivElement | null>(null)
 
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
@@ -57,8 +58,8 @@ export default function Navbar() {
 	useEffect(() => {
 		const handleOutsideClick = (event: MouseEvent) => {
 			if (
-				menuRef.current &&
-				!menuRef.current.contains(event.target as Node)
+				menuDesktopRef.current &&
+				!menuDesktopRef.current.contains(event.target as Node)
 			) {
 				setOpenSubmenu(null)
 			}
@@ -69,10 +70,10 @@ export default function Navbar() {
 		return () => {
 			document.removeEventListener('mousedown', handleOutsideClick)
 		}
-	}, [menuRef])
+	}, [])
 
 	return (
-		<header className="fixed top-0 z-10 w-full bg-[#4A1861] py-4 px-8">
+		<header className="fixed top-0 z-10 w-full bg-[#4A1861] py-4 px-8 text-white">
 			<div className="flex flex-row items-center justify-between">
 				{/* Logo */}
 				<div className="relative h-[53px] flex items-center">
@@ -105,8 +106,8 @@ export default function Navbar() {
 
 				{/* Navegação Desktop */}
 				<nav
+					ref={menuDesktopRef}
 					className="hidden lg:flex flex-row gap-4 items-center relative"
-					ref={menuRef}
 				>
 					{headerData.map((item, index) => (
 						<div key={index} className="relative">
@@ -165,7 +166,10 @@ export default function Navbar() {
 							</button>
 							{/* Submenu no Mobile */}
 							{openSubmenu === index && (
-								<div className="ml-4 mt-2 flex flex-col">
+								<div
+									ref={menuMobileRef}
+									className="ml-4 mt-2 flex flex-col"
+								>
 									{item.submenu.map(
 										(submenuItem, subIndex) => (
 											<Link
