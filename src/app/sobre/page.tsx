@@ -1,4 +1,5 @@
-import PageContent from '@/components/PageContent'
+import PageContent from '@/components/layout/PageContent'
+import Iconsbar from '@/components/sobre/Iconsbar'
 import TextBox from '@/features/sobre/view/TextBox'
 
 export default function Sobre() {
@@ -10,7 +11,7 @@ export default function Sobre() {
 			</h1>
 			<div className="mt-8 flex flex-col gap-16">
 				<section>
-					<div className="flex flex-col text-pretty gap-8">
+					<div className="flex flex-col text-xl text-pretty gap-8">
 						<p>
 							A ABECIN é uma entidade constituída com a finalidade
 							de assegurar o debate sobre a formação de pessoas
@@ -38,7 +39,7 @@ export default function Sobre() {
 					</div>
 				</section>
 				<section className="flex flex-col gap-8">
-					<h2 className="px-8 text-center font-bold text-2xl text-[#292929]">
+					<h2 className="px-8 text-center font-bold text-3xl text-[#292929]">
 						A ABECIN é um espaço político que valoriza tanto a
 						discussão quanto a prática de novos saberes, guiada por
 						quatro linhas fundamentais.
@@ -66,26 +67,18 @@ export default function Sobre() {
 							tipo="info"
 							icone="fa-chart-line"
 							titulo="Impacto na Formação Profissional"
-							conteudo="os saberes derivados da transposição didática e seu efeito na consolidação dos saberes profissionais nos egressos dos cursos"
+							conteudo="Os saberes derivados da transposição didática e seu efeito na consolidação dos saberes profissionais nos egressos dos cursos"
 						/>
 					</div>
 				</section>
 				<section className="flex flex-col gap-6">
 					<div className="flex flex-col gap-4 items-center">
-						<h2 className="px-8 text-center font-bold text-2xl text-[#292929]">
+						<h2 className="px-8 text-center font-bold text-3xl text-[#292929]">
 							Fomentando o Futuro da Profissão
 						</h2>
-						<div className="flex flex-row gap-2">
-							<i className="fa-regular fa-user" />
-							<i className="fa-regular fa-comment-dots" />
-							<i className="fa-solid fa-earth-americas" />
-							<i className="fa-solid fa-book" />
-							<i className="fa-solid fa-landmark" />
-							<i className="fa-solid fa-book-open" />
-							<i className="fa-solid fa-user-graduate" />
-						</div>
+						<Iconsbar />
 					</div>
-					<p className="text-pretty">
+					<p className="text-pretty text-xl">
 						Visto assim, a ABECIN afirma-se como instância
 						constituída para assegurar o debate sobre a formação de
 						seres humanos comprometidos com a manutenção de um corpo
@@ -107,7 +100,7 @@ export default function Sobre() {
 				</section>
 				<section>
 					<div className="bg-abecin-secondary bg-[url('/vector.png')] bg-no-repeat bg-[left_2rem_top_4rem] md:bg-[right_3rem_top_1rem] lg:bg-[right_5rem_top_2rem] lg:bg-[length:250px_220px] rounded-2xl py-12 px-8 md:px-28">
-						<p className="text-center text-pretty text-white font-bold">
+						<p className="text-center text-pretty text-2xl text-white font-bold">
 							Sua missão é, acima de tudo, fortalecer de maneira
 							única o corpo profissional no campo das profissões
 							da informação. Esse fortalecimento cria uma base

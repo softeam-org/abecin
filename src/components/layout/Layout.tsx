@@ -1,10 +1,10 @@
-'use client';
+'use client'
 
-import Navbar from './Navbar';
+import Navbar from '../navbar/Navbar'
 
 interface LayoutProps {
-  /** Elementos filhos a serem renderizados dentro do layout */
-  children: React.ReactNode;
+	/** Elementos filhos a serem renderizados dentro do layout */
+	children: React.ReactNode
 }
 
 /**
@@ -23,10 +23,10 @@ interface LayoutProps {
  * @returns {JSX.Element} Componente de Layout com Navbar e conteúdo dinâmico.
  */
 export default function Layout({ children }: LayoutProps) {
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="flex-grow">{children}</main>
-    </div>
-  );
+	return (
+		<div className="flex flex-col min-h-screen">
+			<Navbar />
+			<main className="flex-grow">{children}</main>
+		</div>
+	)
 }

@@ -20,12 +20,16 @@ export default function TextBox({
 				</div>
 			)}
 			{tipo === 'info' && (
-				<div className="flex flex-row gap-2">
-					<i className={`fa-solid ${icone}`} />
-					<h1 className="font-bold">{titulo}</h1>
+				<div>
+					<div className="flex min-h-20 lg:min-h-[50px] gap-2">
+						<i className={`fa-solid pt-1 ${icone}`} />
+						<h1 className="font-bold text-xl leading-tight">
+							{titulo}
+						</h1>
+					</div>
 				</div>
 			)}
-			<p>{conteudo}</p>
+			<p className="text-sm">{conteudo}</p>
 		</div>
 	)
 }
