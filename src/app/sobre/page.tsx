@@ -1,7 +1,7 @@
 import PageContent from '@/components/layout/PageContent'
-import PageTitle from '@/components/page/PageTitle'
+import PageTitle from '@/components/layout/PageTitle'
 import Iconsbar from '@/components/sobre/Iconsbar'
-import TextBox from '@/features/sobre/view/TextBox'
+import TextBox from '@/components/sobre/TextBox'
 
 export default function Sobre() {
 	return (
