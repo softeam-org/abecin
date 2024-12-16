@@ -10,6 +10,7 @@ Este projeto tem como foco o implementar o re-design do site da abecin, trantand
 * TODAS as novas branchs devem ser criadas a partir da branch develop.
 * TODAS as branchs devem ser nomeadas seguindo o padrão feature/[COMPONENT] para funcionalidades e/ou criação de novos componentes.
 * TODAS as branchs devem ser nomeadas seguindo o padrão fix/[COMPONENT] para correção.
+* **APÓS encerrar a feature e o pull request ser aceito, será necessário remover a branch da feature encerrada.**
 * Para commits, utilize o [ConventionalCommits](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/).
 
 ## Instruções para executar o projeto
