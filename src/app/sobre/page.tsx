@@ -1,14 +1,12 @@
 import PageContent from '@/components/layout/PageContent'
+import PageTitle from '@/components/page/PageTitle'
 import Iconsbar from '@/components/sobre/Iconsbar'
 import TextBox from '@/features/sobre/view/TextBox'
 
 export default function Sobre() {
 	return (
 		<PageContent>
-			<h1 className="text-xl font-bold relative">
-				Sobre
-				<span className="block w-16 h-2 bg-[#4A1861] absolute left-0"></span>
-			</h1>
+			<PageTitle title="Sobre" />
 			<div className="mt-8 flex flex-col gap-16">
 				<section>
 					<div className="flex flex-col text-xl text-pretty gap-8">
@@ -23,7 +21,7 @@ export default function Sobre() {
 							relação direta com o conjunto de interesses e visões
 							de mundo e com o ideário de permanência desse corpo
 							profissional na sociedade.
-						</p>
+						</p >
 						<p>
 							A criação da ABECIN é resultante do entendimento
 							comum de profissionais que hoje, majoritariamente
