@@ -2,11 +2,12 @@ import PageContent from '@/components/layout/PageContent'
 import PageTitle from '@/components/layout/PageTitle'
 import ButtonIcon from '@/components/publicacoes/ButtonIcon'
 import Card from '@/components/publicacoes/Card'
+import Droptout from '@/components/publicacoes/Dropout'
 
 export default function Publicacoes() {
 	return (
 		<PageContent>
-			<div className="flex flex-col gap-12">
+			<div className="flex flex-col gap-24">
 				<section className="flex flex-col gap-4">
 					<PageTitle title="Publicações da Abecin" />
 					<p className="mt-8">
@@ -37,7 +38,7 @@ export default function Publicacoes() {
 				</section>
 				<section className="flex flex-col gap-4">
 					<PageTitle title="Sobre a Rebecin" />
-					<div className='flex flex-col gap-4'>
+					<div className="flex flex-col gap-4">
 						<p className="mt-8">
 							A Revista Brasileira de Educação em Ciência da
 							Informação (REBECIN) é uma revista com periodicidade
@@ -62,19 +63,77 @@ export default function Publicacoes() {
 							Ciência da Informação.
 						</p>
 					</div>
-					<div className='flex flex-col gap-12 mt-12'>
-						<h1 className='text-center font-bold text-2xl text-abecin-primary'>O escopo da REBECIN abrange</h1>
-						<div className='grid grid-cols-2 mx-auto gap-12'>
-							<Card title='Integração Acadêmica e Profissional' description='Currículo e conteúdos formadores: relações entre a academia e o mercado de trabalho' icon='fa-book-bookmark' />
-							<Card title='Pesquisa como Base do Ensino' description='Ensino com pesquisa' icon='fa-magnifying-glass' />
-							<Card title='Formação Ética e Socialmente Responsável' description='Diversidade, ética, formação política e responsabilidade social no ensino para atuação profissional' icon='fa-earth-americas' />
-							<Card title='Extensão: Conexão com a Comunidade' description='Ensino com extensão' icon='fa-handshake' />
-							<Card title='Legado do Movimento Associativo' description='Memória do movimento associativo' icon='fa-folder' />
-							<Card title='Tecnologia na Formação Profissional' description='Tecnologias e dispositivos' icon='fa-desktop' />
-							<Card title='Inovação nas Metodologias de Ensino' description='Metodologias de ensino' icon='fa-graduation-cap' />
-							<Card title='Experiência Prática: Estágios e Voluntariado' description='Estágio curricular, extracurricular e voluntário' icon='fa-clipboard-list' />
-							<Card title='Desenvolvimento de Competências Profissionais' description='Competências oriundas de conteúdos formadores' icon='fa-briefcase' />
+					<div className="flex flex-col gap-12 mt-12">
+						<h1 className="text-center font-bold text-2xl text-abecin-primary">
+							O escopo da REBECIN abrange
+						</h1>
+						<div className="grid grid-cols-2 mx-auto gap-12">
+							<Card
+								title="Integração Acadêmica e Profissional"
+								description="Currículo e conteúdos formadores: relações entre a academia e o mercado de trabalho"
+								icon="fa-book-bookmark"
+							/>
+							<Card
+								title="Pesquisa como Base do Ensino"
+								description="Ensino com pesquisa"
+								icon="fa-magnifying-glass"
+							/>
+							<Card
+								title="Formação Ética e Socialmente Responsável"
+								description="Diversidade, ética, formação política e responsabilidade social no ensino para atuação profissional"
+								icon="fa-earth-americas"
+							/>
+							<Card
+								title="Extensão: Conexão com a Comunidade"
+								description="Ensino com extensão"
+								icon="fa-handshake"
+							/>
+							<Card
+								title="Legado do Movimento Associativo"
+								description="Memória do movimento associativo"
+								icon="fa-folder"
+							/>
+							<Card
+								title="Tecnologia na Formação Profissional"
+								description="Tecnologias e dispositivos"
+								icon="fa-desktop"
+							/>
+							<Card
+								title="Inovação nas Metodologias de Ensino"
+								description="Metodologias de ensino"
+								icon="fa-graduation-cap"
+							/>
+							<Card
+								title="Experiência Prática: Estágios e Voluntariado"
+								description="Estágio curricular, extracurricular e voluntário"
+								icon="fa-clipboard-list"
+							/>
+							<Card
+								title="Desenvolvimento de Competências Profissionais"
+								description="Competências oriundas de conteúdos formadores"
+								icon="fa-briefcase"
+							/>
 						</div>
+					</div>
+				</section>
+				<section className="flex flex-col gap-4 mt-8">
+					<PageTitle title="Sobre a ABECIN editora" />
+					<div className="mt-8 flex flex-col gap-12">
+						<p>
+							A Abecin Editora tem como missão publicar livros e
+							coletâneas, na versão digital, em Ciência da
+							Informação, Biblioteconomia, Arquivologia e
+							Museologia, com base em princípios éticos, legais,
+							sociais, científicos e sustentáveis.
+						</p>
+						<Droptout
+							title="A Abecin Editora publica apenas obras de caráter universitário (individuais ou coletâneas)"
+							list={['Item 1', 'Item 2', 'Item 3']}
+						/>
+						<Droptout
+							title="A Abecin Editora não publica" publish={false}
+							list={['Item 1', 'Item 2', 'Item 3']}
+						/>
 					</div>
 				</section>
 			</div>
