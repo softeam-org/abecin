@@ -79,7 +79,7 @@ export default function Navbar() {
 				<div className="relative h-[53px] flex items-center">
 					<Link href="/" aria-label="Página Inicial">
 						<Image
-							src="/cropped_abecin.png"
+							src="/logo_abecin.png"
 							alt="Logo da Abecin"
 							width={146}
 							height={53}

@@ -12,11 +12,11 @@ export default function TextBox({
 	tipo
 }: TextBoxProps) {
 	return (
-		<div className="bg-abecin-secondary text-white px-10 py-12 rounded-2xl flex flex-col gap-4 relative">
+		<div className="bg-abecin-secondary text-white px-10 py-12 rounded-2xl flex flex-col relative">
 			{tipo === 'cargo' && (
 				<div>
 					<i className={`absolute top-4 right-4 fa-solid ${icone}`} />
-					<h1 className="font-bold">{titulo}</h1>
+					{titulo ? <h1 className="mb-2">{titulo}</h1> : '' }
 				</div>
 			)}
 			{tipo === 'info' && (

@@ -1,5 +1,6 @@
 import PageContent from '@/components/layout/PageContent'
 import PageTitle from '@/components/layout/PageTitle'
+import SectionTitle from '@/components/layout/SectionTitle'
 import Iconsbar from '@/components/sobre/Iconsbar'
 import TextBox from '@/components/sobre/TextBox'
 
@@ -21,7 +22,7 @@ export default function Sobre() {
 							relação direta com o conjunto de interesses e visões
 							de mundo e com o ideário de permanência desse corpo
 							profissional na sociedade.
-						</p >
+						</p>
 						<p>
 							A criação da ABECIN é resultante do entendimento
 							comum de profissionais que hoje, majoritariamente
@@ -37,11 +38,11 @@ export default function Sobre() {
 					</div>
 				</section>
 				<section className="flex flex-col gap-8">
-					<h2 className="px-8 text-center font-bold text-3xl text-[#292929]">
-						A ABECIN é um espaço político que valoriza tanto a
+					<SectionTitle
+						title="A ABECIN é um espaço político que valoriza tanto a
 						discussão quanto a prática de novos saberes, guiada por
-						quatro linhas fundamentais.
-					</h2>
+						quatro linhas fundamentais."
+					/>
 					<div className="mx-auto flex flex-col md:grid md:grid-cols-2 gap-4 max-w-lg md:max-w-4xl">
 						<TextBox
 							tipo="info"
@@ -71,9 +72,7 @@ export default function Sobre() {
 				</section>
 				<section className="flex flex-col gap-6">
 					<div className="flex flex-col gap-4 items-center">
-						<h2 className="px-8 text-center font-bold text-3xl text-[#292929]">
-							Fomentando o Futuro da Profissão
-						</h2>
+						<SectionTitle title="Fomentando o Futuro da Profissão" />
 						<Iconsbar />
 					</div>
 					<p className="text-pretty text-xl">

@@ -42,7 +42,7 @@ const headerData: MenuItem[] = [
 		link: '/sobre',
 		submenu: [
 			{ label: 'Quem Somos', link: '/sobre/' },
-			{ label: 'Gestão 2022-2025', link: '/sobre/diretoria' },
+			{ label: 'Gestão 2022-2025', link: '/gestao' },
 			{ label: 'Gestões Anteriores', link: '/sobre/historia' },
 			{ label: 'Estatuto', link: '/sobre/estatuto' }
 		]
