@@ -1,8 +1,8 @@
-import PageContent from '@/components/layout/PageContent'
-import PageTitle from '@/components/layout/PageTitle'
 import ButtonIcon from '@/components/publicacoes/ButtonIcon'
+import PageContent from '@/components/layout/PageContent'
+import Droptdown from '@/components/publicacoes/Dropdown'
+import PageTitle from '@/components/layout/PageTitle'
 import Card from '@/components/publicacoes/Card'
-import Droptout from '@/components/publicacoes/Dropout'
 
 export default function Publicacoes() {
 	return (
@@ -23,7 +23,7 @@ export default function Publicacoes() {
 							ABECIN Editora.
 						</span>
 					</p>
-					<div className="flex flex-row gap-6">
+					<div className="flex flex-col  md:flex-row gap-6">
 						<ButtonIcon
 							title="Acessar Rebecin"
 							icon="fa-book-open"
@@ -67,7 +67,7 @@ export default function Publicacoes() {
 						<h1 className="text-center font-bold text-2xl text-abecin-primary">
 							O escopo da REBECIN abrange
 						</h1>
-						<div className="grid grid-cols-2 mx-auto gap-12">
+						<div className="grid lg:grid-cols-2 md:mx-auto gap-12">
 							<Card
 								title="Integração Acadêmica e Profissional"
 								description="Currículo e conteúdos formadores: relações entre a academia e o mercado de trabalho"
@@ -126,13 +126,25 @@ export default function Publicacoes() {
 							Museologia, com base em princípios éticos, legais,
 							sociais, científicos e sustentáveis.
 						</p>
-						<Droptout
+						<Droptdown
 							title="A Abecin Editora publica apenas obras de caráter universitário (individuais ou coletâneas)"
-							list={['Item 1', 'Item 2', 'Item 3']}
+							list={[
+								'Obras científicas',
+								'Propostas de obras técnicas de referência',
+								'Obras derivadas de dissertações e teses'
+							]}
 						/>
-						<Droptout
-							title="A Abecin Editora não publica" publish={false}
-							list={['Item 1', 'Item 2', 'Item 3']}
+						<Droptdown
+							title="A Abecin Editora não publica"
+							publish={false}
+							list={[
+								'Livros de literatura (contos, poesia, romance)',
+								'Autoajuda',
+								'Guias de turismo',
+								'Infantojuvenil',
+								'Empresariais',
+								'teste'
+							]}
 						/>
 					</div>
 				</section>
