@@ -73,7 +73,7 @@ export default function Navbar() {
 	}, [])
 
 	return (
-		<header className="fixed top-0 z-10 w-full bg-[#4A1861] py-4 px-8 text-white">
+		<header className="fixed top-0 z-10 w-full bg-[#4A1861]  py-4 px-8 text-white">
 			<div className="flex flex-row items-center justify-between">
 				{/* Logo */}
 				<div className="relative h-[53px] flex items-center">
@@ -112,7 +112,7 @@ export default function Navbar() {
 					{headerData.map((item, index) => (
 						<div key={index} className="relative">
 							<button
-								className="font-bold cursor-pointer flex items-center"
+								className="font-bold cursor-pointer text-base flex items-center"
 								onClick={() => handleButtonClick(item, index)}
 							>
 								{item.label}

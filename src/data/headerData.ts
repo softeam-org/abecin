@@ -74,7 +74,7 @@ const headerData: MenuItem[] = [
 		label: 'Publicações',
 		link: '/publicacoes',
 		submenu: [
-			{ label: 'ABECIN', link: '/publicacoes/abecin' },
+			{ label: 'ABECIN', link: '/publicacoes/' },
 			{ label: 'Outras publicações', link: '/publicacoes/outras' }
 		]
 	},
@@ -82,10 +82,10 @@ const headerData: MenuItem[] = [
 		label: 'Documentos',
 		link: '/documentos',
 		submenu: [
-      { label: 'ABECIN', link: '/documentos/abecin' },
-      { label: 'Escolas', link: '/documentos/escolas'},
-      { label: 'Prestações de contas', link: '/documentos/transparencia' },
-    ]
+			{ label: 'ABECIN', link: '/documentos/abecin' },
+			{ label: 'Escolas', link: '/documentos/escolas' },
+			{ label: 'Prestações de contas', link: '/documentos/transparencia' }
+		]
 	},
 	{
 		label: 'Notícias',

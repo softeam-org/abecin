@@ -16,7 +16,7 @@ export default function TextBox({
 			{tipo === 'cargo' && (
 				<div>
 					<i className={`absolute top-4 right-4 fa-solid ${icone}`} />
-					{titulo ? <h1 className="mb-2">{titulo}</h1> : '' }
+					{titulo ? <h1 className="mb-2 text-xl">{titulo}</h1> : '' }
 				</div>
 			)}
 			{tipo === 'info' && (
@@ -29,7 +29,7 @@ export default function TextBox({
 					</div>
 				</div>
 			)}
-			<p className="text-sm">{conteudo}</p>
+			<p className={tipo === 'cargo' ? "text-lg" : "text-sm"}>{conteudo}</p>
 		</div>
 	)
 }

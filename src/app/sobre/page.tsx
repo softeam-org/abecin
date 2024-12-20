@@ -10,7 +10,7 @@ export default function Sobre() {
 			<PageTitle title="Sobre" />
 			<div className="mt-8 flex flex-col gap-16">
 				<section>
-					<div className="flex flex-col text-xl text-pretty gap-8">
+					<div className="flex flex-col text-pretty gap-8">
 						<p>
 							A ABECIN é uma entidade constituída com a finalidade
 							de assegurar o debate sobre a formação de pessoas
@@ -75,7 +75,7 @@ export default function Sobre() {
 						<SectionTitle title="Fomentando o Futuro da Profissão" />
 						<Iconsbar />
 					</div>
-					<p className="text-pretty text-xl">
+					<p className="text-pretty">
 						Visto assim, a ABECIN afirma-se como instância
 						constituída para assegurar o debate sobre a formação de
 						seres humanos comprometidos com a manutenção de um corpo
@@ -97,7 +97,7 @@ export default function Sobre() {
 				</section>
 				<section>
 					<div className="bg-abecin-secondary bg-[url('/vector.png')] bg-no-repeat bg-[left_2rem_top_4rem] md:bg-[right_3rem_top_1rem] lg:bg-[right_5rem_top_2rem] lg:bg-[length:250px_220px] rounded-2xl py-12 px-8 md:px-28">
-						<p className="text-center text-pretty text-2xl text-white font-bold">
+						<p className="text-center text-pretty text-white font-bold">
 							Sua missão é, acima de tudo, fortalecer de maneira
 							única o corpo profissional no campo das profissões
 							da informação. Esse fortalecimento cria uma base
